@@ -33,10 +33,9 @@ conf := &Conf{UserName: "root", Password: "dsdhjhj"}
 		t.Fatalf("new conf [err:%v]", err)
 	}
 	for {
-		fmt.Println("a", conf.Password)
-		fmt.Println(conf.TextGBK)
-		time.Sleep(5 * time.Second)
-	}
+	       fmt.Println("a", conf.Password)
+	       time.Sleep(5 * time.Second)
+		}
 ```
 
  
