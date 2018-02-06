@@ -8,7 +8,7 @@
   * 支持两种tag:conf、auto
   
   * 支持默认参数（retryTimes(3)、retrySleepSeconds(5)、downloadDir(./disconf/download/)、ignore）
-  
+    *  tag conf 是属性文件中的名称，如果加了auto:"true"表示该属性在disconf服务端更新之后，客户端会自动加载
   * example
   
 ```
