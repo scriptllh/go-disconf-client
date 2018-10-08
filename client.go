@@ -165,7 +165,7 @@ func (c *Client) autoLoad(confs []*Result) {
 			if conf.Genre == DISCONF_TYPE_FILE {
 				fileMap, err := c.store.loadProperties(c.downloadDir, conf.Name, INIT_CONF)
 				byteValue, err = json.Marshal(fileMap)
-				fmt.Println(string(byteValue))
+				//fmt.Println(string(byteValue))
 				if err != nil {
 					logrus.Errorf("marshal value [err:%v]", err)
 				}

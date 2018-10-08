@@ -7,7 +7,7 @@
 package disconf_client
 
 import (
-	"github.com/tietang/props"
+	"github.com/tietang/props/kvs"
 	"strings"
 	"io/ioutil"
 	"reflect"
@@ -59,10 +59,10 @@ func (s *Store) loadPropertiesDir(filePath string, ignore string) error {
 
 func (s *Store) loadProperties(filePath, fileName, flag string, ) (map[string]string, error) {
 	ok := strings.HasSuffix(fileName, FILE_PROPERTIES)
-    var errs []error
+	var errs []error
 	fileMap := make(map[string]string)
 	if ok {
-		p, err := props.ReadPropertyFile(filePath + fileName)
+		p, err := kvs.ReadPropertyFile(filePath + fileName)
 		if err != nil {
 			return nil, err
 		}
@@ -74,7 +74,7 @@ func (s *Store) loadProperties(filePath, fileName, flag string, ) (map[string]st
 	return fileMap, nil
 }
 
-func (s *Store) convertProperties(p *props.Properties, flag string) (map[string]string, []error) {
+func (s *Store) convertProperties(p *kvs.Properties, flag string) (map[string]string, []error) {
 	keys := p.Keys()
 	var errs []error
 	fileMap := make(map[string]string)
