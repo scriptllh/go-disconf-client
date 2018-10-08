@@ -41,7 +41,9 @@ conf := &Conf{UserName: "root", Password: "dsdhjhj"}
 
  
 
+###### 整体架构
 
+   ![avatar](https://github.com/scriptllh/go-disconf-client/blob/dev/docs/flow.svg)
 
   
 
