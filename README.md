@@ -3,7 +3,7 @@
 1.使用说明
    
  
-  * 只能传一个结构体的指针，且该结构体中只能有基础数据类型(支持int、int64、string、bool、float32、float64)
+  * 传一个结构体的指针,支持数据类型(支持int、int64、string、bool、float32、float64)
  
   * 支持两种tag:conf、auto
   
@@ -39,12 +39,22 @@ conf := &Conf{UserName: "root", Password: "dsdhjhj"}
 		}
 ```
 
- 
+
+***
 
 ###### 整体架构
 
    ![avatar](https://github.com/scriptllh/go-disconf-client/blob/dev/docs/flow.svg)
 
   
-
+***
   
+##### 特性
+   *  支持自定义配置文件下载路径
+    * 支持配置文件和配置项
+    * 支持可配置的只加载本地配置
+    * 不需要重启更改配置文件或配置项
+    *  应用程序无感知
+
+
+
